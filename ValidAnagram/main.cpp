@@ -11,12 +11,11 @@ public:
         unordered_map<char,int> map1, map2 = {};
 
         for (int i = 0; i <= s.size(); i++) {
-            map1[s[i]] = 1 + map1[s[i]];
-            map2[t[i]] = 1 + map2[t[i]];
+            map1[s[i]]++;
+            map2[t[i]]++;
         }
 
         if (map1 != map2) return false;
-
         return true;
     }
 };
